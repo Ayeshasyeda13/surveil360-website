@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surveil360° | BaseCam Data Solutions Pvt. Ltd.</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet" />
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo-wrap" onclick="showPage('home')">
+      <img class="logo-img" alt="Surveil360 Logo" src="images/Website-Header.JPG" />
+    </div>
+    <div class="nav-links">
+      <a href="#home"><button class="nav-btn active" onclick="showPage('home')">Home</button></a>
+      <a href="#about"><button class="nav-btn" onclick="showPage('about')">About</button></a>
+      <a href="#services"><button class="nav-btn" onclick="showPage('services')">Services</button></a>
+      <a href="#industries"><button class="nav-btn" onclick="showPage('industries')">Industries</button></a>
+      <a href="#team"><button class="nav-btn" onclick="showPage('team')">Team</button></a>
+      <a href="#contact"> <button class="nav-btn" onclick="showPage('contact')">Contact</button></a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HOME ═══════════════ detect verify respon-->
+  <div id="home" class="page active">
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="hero-orb"></div>
+      <div class="scanline"></div>
+      <div class="hero-eyebrow">AI-Powered Surveillance Intelligence</div>
+      <h1>Your cameras <span class="strike">record</span><br />crime. we<br /><em>prevent</em> it.</h1>
+      <p class="hero-sub"> AI + Human CCTV Monitoring | Prevent Incidents Before They Happen | Live Alert CCTV Audits ●
+        Camera Health Monitoring.</p>
+      <div class="hero-cta">
+        <button class="btn-primary" onclick="showPage('contact')">Get a Free Demo</button>
+        <button class="btn-ghost" onclick="showPage('services')">Explore Services</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">Live Monitoring</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">AI+</div>
+          <div class="stat-label">Human Verified</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">GOI</div>
+          <div class="stat-label">Approved Est.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem-section">
+      <div class="section-tag">The Problem</div>
+      <h2>Traditional surveillance is broken.</h2>
+      <div class="problem-cards">
+        <div class="problem-card">
+          <div class="icon"><img
+              src="data:image/png;base64,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"
+              alt="CCTV camera" style="width:48px;height:auto;display:block" /></div>
+          <h3>Most Cameras Record. Few Prevent.</h3>
+          <p>90%+ of footage is reviewed only after an event occurs, leaving organizations vulnerable to theft,
+            liability, blind spots, camera failures, and delayed response—costing millions each year.</p>
+        </div>
+        <div class="problem-card">
+          <div class="icon">🔴</div>
+          <h3>Reactive, Not Proactive</h3>
+          <p>By the time footage is reviewed, the incident has already occurred — theft committed, safety violated,
+            damage done.</p>
+        </div>
+        <div class="problem-card">
+          <div class="icon">😴</div>
+          <h3>Human Fatigue</h3>
+          <p>Security personnel watching hours of footage miss critical events. Humans are not built for 24/7 visual
+            attention.</p>
+        </div>
+        <div class="problem-card">
+          <div class="icon">🏢</div>
+          <h3>Multi-Site Blind Spots</h3>
+          <p>Managing multiple locations means fragmented monitoring, inconsistent protocols, and costly on-site
+            staffing.</p>
+        </div>
+        <div class="problem-card">
+          <div class="icon">💸</div>
+          <h3>Pain Point</h3>
+          <p>Businesses invest heavily in CCTV systems, yet most footage is never actively monitored. As a result:</p>
+          <ul style="margin-top:12px;padding-left:18px;display:flex;flex-direction:column;gap:8px;">
+            <li style="color:var(--silver);font-size:0.92rem;">Theft and losses occur unnoticed</li>
+            <li style="color:var(--silver);font-size:0.92rem;">Security staffing costs remain high</li>
+          </ul>
+        </div>
+        <div class="problem-card">
+          <div class="icon">⚠️</div>
+          <h3>Security Challenges</h3>
+          <ul style="margin-top:12px;padding-left:18px;display:flex;flex-direction:column;gap:8px;">
+            <li style="color:var(--silver);font-size:0.92rem;">Camera Downtime</li>
+            <li style="color:var(--silver);font-size:0.92rem;">Missing Recordings</li>
+            <li style="color:var(--silver);font-size:0.92rem;">Storage Constraints</li>
+            <li style="color:var(--silver);font-size:0.92rem;">Camera Misalignment</li>
+            <li style="color:var(--silver);font-size:0.92rem;">Limited Visibility</li>
+            <li style="color:var(--silver);font-size:0.92rem;">Poor System Health Monitoring</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="solution-section">
+      <div class="section-header">
+        <div class="section-tag" style="color:var(--electric);--crimson:var(--electric)">
+          <span style="display:flex;align-items:center;gap:10px">
+            <span style="width:24px;height:1px;background:var(--electric);display:block"></span>
+            The Surveil360° Solution
+          </span>
+        </div>
+        <h2>Intelligence layered onto<br />infrastructure you already own.</h2>
+        <p>We plug into your existing cameras and add a real-time AI brain — so you stop reacting to crime and start
+          preventing it.</p>
+      </div>
+      <div class="solution-grid">
+        <div class="sol-card">
+          <div class="sol-num">01</div>
+          <h3>Prevent Incidents Before They Happen</h3>
+          <p>AI + Human Monitoring combines AI-powered threat detection, live human verification, instant video alerts,
+            and daily camera health monitoring. Detect. Verify. Respond.</p>
+        </div>
+        <div class="sol-card">
+          <div class="sol-num">02</div>
+          <h3>AI-Powered Detection</h3>
+          <p>Computer vision models trained on threat scenarios detect anomalies, intrusions, and safety violations in
+            real-time.</p>
+        </div>
+        <div class="sol-card">
+          <div class="sol-num">03</div>
+          <h3>Human Expert Verification</h3>
+          <p>Every AI alert is cross-checked by trained human analysts before escalation — eliminating false alarm
+            fatigue.</p>
+        </div>
+        <div class="sol-card">
+          <div class="sol-num">04</div>
+          <h3>Instant Alert System</h3>
+          <p>Verified threats trigger immediate notifications to your security team, management, or emergency services.
+          </p>
+        </div>
+        <div class="sol-card">
+          <div class="sol-num">05</div>
+          <h3>Remote Command Center</h3>
+          <p>All your sites monitored from a single intelligent dashboard — scale from one location to hundreds with
+            ease.</p>
+        </div>
+        <div class="sol-card">
+          <div class="sol-num">06</div>
+          <h3>Actionable Reporting</h3>
+          <p>Detailed incident logs, heatmaps, and compliance reports that give management real operational
+            intelligence.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <div id="about" class="page">
+    <section class="page-hero">
+      <div class="ph-tag">About BaseCam Data Solutions</div>
+      <h1>India's premier <em>AI surveillance</em><br />intelligence company.</h1>
+      <p>Founded with a mission to make proactive security accessible to every business — from single-outlet retail to
+        multi-site enterprise operations.</p>
+    </section>
+
+    <div class="about-body">
+      <div class="about-grid">
+        <div class="text-col">
+          <h2>Who We Are</h2>
+          <p>BaseCam Data Solutions Private Limited is a Government of India approved establishment, operating the
+            Surveil360° platform — an AI-powered surveillance intelligence system that transforms passive CCTV cameras
+            into active, real-time security agents.</p>
+          <p>We believe that advanced security intelligence should not require a massive capital investment. By layering
+            our technology onto existing camera infrastructure, we democratise enterprise-grade surveillance for
+            businesses of every size.</p>
+          <p>Our operations run 24 hours a day, 7 days a week, 365 days a year — with AI detection backed by human
+            expert verification. We don't just alert; we verify, escalate, and document every incident with precision.
+          </p>
+          <h2 style="margin-top:40px">Our Mission</h2>
+          <p>To shift the global security paradigm from reactive incident response to proactive threat prevention —
+            using AI, human expertise, and real-time intelligence.</p>
+          <h2 style="margin-top:40px">Our Journey</h2>
+          <p>Incorporated in 2023 under the Ministry of Corporate Affairs, BaseCam Data Solutions has rapidly built a
+            proven track record across multiple industries in India, with expansion underway across South Asia and the
+            Middle East.</p>
+        </div>
+        <div class="cert-col">
+          <h2 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.5rem;margin-bottom:28px">Government
+            Registrations</h2>
+          <div class="cert-cards">
+            <div class="cert-card">
+              <div class="cert-icon">🏛️</div>
+              <div>
+                <h4>Ministry of Corporate Affairs</h4>
+                <p>CIN No. U74999TG2023PTC170483</p>
+              </div>
+            </div>
+            <div class="cert-card">
+              <div class="cert-icon">🏭</div>
+              <div>
+                <h4>DIPP — Dept. of Commerce</h4>
+                <p>Certificate No. DIPP128114<br />Ministry of Commerce & Industry</p>
+              </div>
+            </div>
+            <div class="cert-card">
+              <div class="cert-icon">🏢</div>
+              <div>
+                <h4>Ministry of MSME</h4>
+                <p>UDYAM Registration<br />No. UDYAM-TS-O2-0091573</p>
+              </div>
+            </div>
+            <div class="cert-card">
+              <div class="cert-icon">✅</div>
+              <div>
+                <h4>Govt. of India Approved</h4>
+                <p>Established & operating under full compliance with Indian regulatory frameworks since 2023.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Our Journey -->
+    <section class="journey-section">
+      <div class="jt-tag">From Partnership to Platform</div>
+      <h2>Our Journey</h2>
+      <p>BaseCam's story runs from a single travel and forex venture to a structured surveillance-intelligence company
+        monitoring thousands of cameras worldwide.</p>
+      <div class="timeline-rail">
+        <div class="tl-row">
+          <span class="tl-yr">2014</span>
+          <h4>BaseCamp Data Solutions founded</h4>
+          <p>Began as a partnership firm focused on remote monitoring and data-driven surveillance services.</p>
+        </div>
+        <div class="tl-row">
+          <span class="tl-yr">2020</span>
+          <h4>Governance restructuring</h4>
+          <p>Moved toward a Private Limited structure to support compliance and global scale during a period of
+            accelerated demand.</p>
+        </div>
+        <div class="tl-row">
+          <span class="tl-yr">2021</span>
+          <h4>Capability building</h4>
+          <p>Invested in advanced certifications across AI, cybersecurity, and facial recognition to deepen technical
+            capability.</p>
+        </div>
+        <div class="tl-row">
+          <span class="tl-yr">2023</span>
+          <h4>Formal incorporation</h4>
+          <p>BaseCam Data Solutions Private Limited incorporated, operating under CIN U74999TG2023PTC170483.</p>
+        </div>
+        <div class="tl-row">
+          <span class="tl-yr">Today</span>
+          <h4>Surveil360° platform</h4>
+          <p>Delivering AI-powered monitoring across retail, industrial, residential, construction sites, gas stations,
+            girls' hostels, and religious sectors.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proven Track Record -->
+    <section class="track-section">
+      <div class="jt-tag">Evidence, Not Claims</div>
+      <h2>Proven Track Record</h2>
+      <p>Every figure below reflects active monitoring relationships — not capacity, not projections.</p>
+
+      <div class="track-strip">
+        <div>
+          <div class="track-num">1,200+</div>
+          <div class="track-lbl">Retail locations overseen</div>
+        </div>
+        <div>
+          <div class="track-num">9,500+</div>
+          <div class="track-lbl">Cameras remotely managed</div>
+        </div>
+        <div>
+          <div class="track-num">250+</div>
+          <div class="track-lbl">Trained analysts</div>
+        </div>
+        <div>
+          <div class="track-num">3</div>
+          <div class="track-lbl">Round-the-clock shifts</div>
+        </div>
+      </div>
+
+      <div class="track-subtag">Past Engagement — Previously Monitored</div>
+      <div class="track-card">
+        <span class="tag">TELECOM RETAIL</span>
+        <h4>Verizon Communication Stores</h4>
+        <p>Remote surveillance and operational monitoring delivered across Verizon communication store locations in the
+          United States, United Kingdom, and Canada.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════ SERVICES ═══════════════ -->
+  <div id="services" class="page">
+    <section class="page-hero">
+      <div class="ph-tag">What We Offer</div>
+      <h1>Surveillance that <em>thinks</em>,<br />not just records.</h1>
+      <p>A complete suite of AI-powered security services that layer onto your existing infrastructure.</p>
+    </section>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="s-num">01</div>
+        <div class="s-icon">🧠</div>
+        <h3>AI Threat Detection</h3>
+        <p>Real-time computer vision models trained on thousands of threat scenarios detect intrusions, loitering,
+          aggression, and safety violations the moment they occur — not hours later on a review.</p>
+        <span class="service-tag">Core Engine</span>
+      </div>
+      <div class="service-card">
+        <div class="s-num">02</div>
+        <div class="s-icon">👁️</div>
+        <h3>24/7 Remote Monitoring</h3>
+        <p>Your cameras are watched around the clock by our AI system and human verification analysts from our remote
+          command centre. No staffing gaps. No shift changes. Continuous vigilance.</p>
+        <span class="service-tag">Always On</span>
+      </div>
+      <div class="service-card">
+        <div class="s-num">03</div>
+        <div class="s-icon">🔔</div>
+        <h3>Instant Verified Alerts</h3>
+        <p>AI flags an event → human analyst verifies → alert sent within seconds to your security team, management, or
+          emergency services. No crying wolf. No missed emergencies.</p>
+        <span class="service-tag">Zero False Alarms</span>
+      </div>
+      <div class="service-card">
+        <div class="s-num">04</div>
+        <div class="s-icon">📊</div>
+        <h3>Operational Intelligence</h3>
+        <p>Beyond security — analyse foot traffic, queue lengths, staff compliance, and operational patterns. Turn your
+          cameras into a genuine business intelligence tool.</p>
+        <span class="service-tag">Business Insight</span>
+      </div>
+      <div class="service-card">
+        <div class="s-num">05</div>
+        <div class="s-icon">📋</div>
+        <h3>Compliance & Reporting</h3>
+        <p>Detailed incident logs, timestamped evidence, compliance dashboards, and exportable reports for management
+          reviews, insurance claims, and regulatory audits.</p>
+        <span class="service-tag">Documentation</span>
+      </div>
+      <div class="service-card">
+        <div class="s-num">06</div>
+        <div class="s-icon">🛠️</div>
+        <h3>Camera Health Audits</h3>
+        <p>Scheduled diagnostic sweeps across every connected camera — checking feed uptime, lens focus and obstruction,
+          night-vision performance, storage integrity, and network latency — so failures are caught and fixed before
+          they create a blind spot.</p>
+        <span class="service-tag">Proactive Diagnostics</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ INDUSTRIES ═══════════════ -->
+  <div id="industries" class="page">
+    <section class="page-hero">
+      <div class="ph-tag">Industry Outlook</div>
+      <h1>Built for <em>high-risk</em>,<br />multi-site operations.</h1>
+      <p>Surveil360° deploys across sectors where security failures are costly, compliance is mandatory, and operational
+        oversight is non-negotiable.</p>
+    </section>
+
+    <div class="industries-wrap">
+      <div class="industry-row">
+        <div class="ind-left">
+          <div class="ind-icon">🏪</div>
+          <div class="ind-name">Retail</div>
+          <div class="ind-tag">HIGH PRIORITY</div>
+        </div>
+        <div class="ind-right">
+          <p>Retail is the single largest victim of organised theft and shrinkage globally. Traditional CCTV captures
+            the evidence of theft — Surveil360° prevents it. Our AI detects shoplifting behaviour patterns, unusual
+            loitering near high-value merchandise, and staff compliance violations in real-time.</p>
+          <p>From single-outlet boutiques to national retail chains with hundreds of locations, our platform scales
+            without proportionally scaling your security cost.</p>
+          <div class="use-cases">
+            <span class="use-case">Shoplifting Prevention</span>
+            <span class="use-case">Queue Management</span>
+            <span class="use-case">Staff Compliance</span>
+            <span class="use-case">Inventory Zone Monitoring</span>
+            <span class="use-case">After-Hours Intrusion</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-row">
+        <div class="ind-left">
+          <div class="ind-icon">🏭</div>
+          <div class="ind-name">Manufacturing & Warehousing</div>
+          <div class="ind-tag">INDUSTRIAL</div>
+        </div>
+        <div class="ind-right">
+          <p>Industrial facilities face unique challenges: vast floor areas, shift-based operations, high-value
+            equipment, and strict safety compliance requirements. A single safety protocol violation can cause injury,
+            regulatory penalty, or operational shutdown.</p>
+          <p>Surveil360° monitors PPE compliance, restricted zone access, machinery safety distances, and fire hazard
+            conditions — flagging violations before they become incidents.</p>
+          <div class="use-cases">
+            <span class="use-case">PPE Compliance</span>
+            <span class="use-case">Restricted Zone Access</span>
+            <span class="use-case">Fire & Hazard Detection</span>
+            <span class="use-case">Perimeter Security</span>
+            <span class="use-case">Asset Tracking</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-row">
+        <div class="ind-left">
+          <div class="ind-icon">🏨</div>
+          <div class="ind-name">Hospitality & Hotels</div>
+          <div class="ind-tag">PREMIUM</div>
+        </div>
+        <div class="ind-right">
+          <p>Hotels and hospitality venues manage guest security, staff conduct, and asset protection across complex,
+            multi-zone environments. A single security incident can cause irreparable reputational damage.</p>
+          <p>Our system monitors lobby areas, car parks, back-of-house operations, and guest corridors — ensuring a
+            secure environment without compromising the guest experience.</p>
+          <div class="use-cases">
+            <span class="use-case">Guest Safety</span>
+            <span class="use-case">Car Park Monitoring</span>
+            <span class="use-case">Staff Conduct</span>
+            <span class="use-case">Unauthorised Access</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-row">
+        <div class="ind-left">
+          <div class="ind-icon">🏫</div>
+          <div class="ind-name">Education & Institutions</div>
+          <div class="ind-tag">SAFE CAMPUS</div>
+        </div>
+        <div class="ind-right">
+          <p>Schools, colleges, and universities have a duty of care to students, staff, and visitors. Campuses are
+            large, often under-staffed from a security perspective, and face risks ranging from unauthorised entry to
+            student safety incidents.</p>
+          <p>Surveil360° provides comprehensive campus monitoring with after-hours intrusion detection, perimeter
+            alerts, and crowd anomaly detection for events and assemblies.</p>
+          <div class="use-cases">
+            <span class="use-case">Perimeter Monitoring</span>
+            <span class="use-case">Unauthorised Entry</span>
+            <span class="use-case">Crowd Anomaly</span>
+            <span class="use-case">After-Hours Detection</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-row">
+        <div class="ind-left">
+          <div class="ind-icon">🏥</div>
+          <div class="ind-name">Healthcare</div>
+          <div class="ind-tag">CRITICAL</div>
+        </div>
+        <div class="ind-right">
+          <p>Hospitals and healthcare facilities are high-stress environments with controlled substance security,
+            patient safety, and 24/7 operational requirements. Access control failures in healthcare settings can have
+            severe consequences.</p>
+          <p>Our platform monitors medication storage areas, restricted wings, patient welfare zones, and facility
+            perimeters — providing the security layer that human staff alone cannot maintain.</p>
+          <div class="use-cases">
+            <span class="use-case">Controlled Access</span>
+            <span class="use-case">Patient Safety Monitoring</span>
+            <span class="use-case">Asset Security</span>
+            <span class="use-case">Staff Safety</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-row">
+        <div class="ind-left">
+          <div class="ind-icon">⛪</div>
+          <div class="ind-name">Religious & Community Sites</div>
+          <div class="ind-tag">PUBLIC SAFETY</div>
+        </div>
+        <div class="ind-right">
+          <p>Temples, mosques, churches, and community gathering places draw large crowds at regular intervals, often
+            with limited security infrastructure. The open nature of these venues creates unique security challenges.
+          </p>
+          <p>Surveil360° provides discreet, respectful monitoring that detects crowd surges, unauthorised after-hours
+            access, and safety-critical situations without disrupting the sanctity of the space.</p>
+          <div class="use-cases">
+            <span class="use-case">Crowd Management</span>
+            <span class="use-case">After-Hours Security</span>
+            <span class="use-case">Donation Box Monitoring</span>
+            <span class="use-case">VIP Protection</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-row">
+        <div class="ind-left">
+          <div class="ind-icon">💎</div>
+          <div class="ind-name">Jewelry Shops</div>
+          <div class="ind-tag">HIGH VALUE</div>
+        </div>
+        <div class="ind-right">
+          <p>Jewelry retail carries among the highest theft-to-revenue risk of any retail category, with high-value
+            inventory concentrated in small, accessible spaces. A single lapse in vigilance can result in significant
+            loss.</p>
+          <p>Surveil360° monitors display cases, counter interactions, and entry points in real-time — flagging
+            suspicious behaviour before merchandise leaves the premises.</p>
+          <div class="use-cases">
+            <span class="use-case">Display Case Monitoring</span>
+            <span class="use-case">Counter Surveillance</span>
+            <span class="use-case">Snatch & Grab Detection</span>
+            <span class="use-case">After-Hours Intrusion</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-row">
+        <div class="ind-left">
+          <div class="ind-icon">⛽</div>
+          <div class="ind-name">Gas Stations</div>
+          <div class="ind-tag">24/7 RISK</div>
+        </div>
+        <div class="ind-right">
+          <p>Gas stations operate around the clock with cash handling, fuel theft, and lone-worker exposure as constant
+            risk factors — often with minimal on-site security staff during night hours.</p>
+          <p>Our platform monitors pump areas, cash counters, and forecourts continuously, detecting drive-offs,
+            altercations, and unauthorised access outside business hours.</p>
+          <div class="use-cases">
+            <span class="use-case">Fuel Theft Detection</span>
+            <span class="use-case">Cash Counter Monitoring</span>
+            <span class="use-case">Lone Worker Safety</span>
+            <span class="use-case">After-Hours Security</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-row">
+        <div class="ind-left">
+          <div class="ind-icon">🍽️</div>
+          <div class="ind-name">Restaurants</div>
+          <div class="ind-tag">SERVICE & SAFETY</div>
+        </div>
+        <div class="ind-right">
+          <p>Restaurants face a unique mix of cash handling, food-safety compliance, staff conduct, and front-of-house
+            security risks — all within a fast-paced, high-turnover environment.</p>
+          <p>Surveil360° monitors kitchen hygiene compliance, billing counters, dining areas, and back-entry points,
+            giving owners oversight across every shift without being physically present.</p>
+          <div class="use-cases">
+            <span class="use-case">Kitchen Hygiene Compliance</span>
+            <span class="use-case">Billing Counter Monitoring</span>
+            <span class="use-case">Staff Conduct</span>
+            <span class="use-case">Dine-and-Dash Detection</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-row">
+        <div class="ind-left">
+          <div class="ind-icon">🏋️</div>
+          <div class="ind-name">Gyms & Fitness Centers</div>
+          <div class="ind-tag">MEMBER SAFETY</div>
+        </div>
+        <div class="ind-right">
+          <p>Gyms operate extended or 24-hour access hours with valuable equipment, locker rooms, and members exercising
+            alone — creating both safety and asset-protection challenges.</p>
+          <p>Our system monitors equipment areas, entry turnstiles, and common spaces for accidents, equipment misuse,
+            theft from lockers, and unauthorised after-hours access.</p>
+          <div class="use-cases">
+            <span class="use-case">Equipment Monitoring</span>
+            <span class="use-case">Locker Room Security</span>
+            <span class="use-case">Accident Detection</span>
+            <span class="use-case">After-Hours Access Control</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-row">
+        <div class="ind-left">
+          <div class="ind-icon">🎰</div>
+          <div class="ind-name">Casinos</div>
+          <div class="ind-tag">REGULATED</div>
+        </div>
+        <div class="ind-right">
+          <p>Casinos operate under strict regulatory surveillance mandates, with high cash volumes, gaming integrity
+            requirements, and a need to detect fraud, collusion, and theft in real-time.</p>
+          <p>Surveil360° provides continuous monitoring of gaming floors, cash cages, and back-of-house areas —
+            supporting compliance while strengthening fraud and theft detection.</p>
+          <div class="use-cases">
+            <span class="use-case">Gaming Floor Monitoring</span>
+            <span class="use-case">Cash Cage Security</span>
+            <span class="use-case">Fraud & Collusion Detection</span>
+            <span class="use-case">Regulatory Compliance</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-row">
+        <div class="ind-left">
+          <div class="ind-icon">🏛️</div>
+          <div class="ind-name">Government Establishments</div>
+          <div class="ind-tag">SECURE PERIMETER</div>
+        </div>
+        <div class="ind-right">
+          <p>Government buildings and public offices require strict access control, perimeter security, and visitor
+            management — often across large, multi-entry facilities serving the public daily.</p>
+          <p>Our platform monitors entry checkpoints, restricted zones, and public-facing areas, detecting unauthorised
+            access and unusual activity while maintaining a record-ready audit trail.</p>
+          <div class="use-cases">
+            <span class="use-case">Access Control</span>
+            <span class="use-case">Perimeter Security</span>
+            <span class="use-case">Visitor Management</span>
+            <span class="use-case">Restricted Zone Monitoring</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="team" class="page">
+    <section class="page-hero">
+      <div class="ph-tag">The People Behind Surveil360°</div>
+      <h1>Driven by <em>purpose</em>,<br />built by experts.</h1>
+      <p>A team of security professionals, AI engineers, and operations specialists united by a single mission: make
+        proactive surveillance accessible to every business in India and beyond.</p>
+    </section>
+
+    <div class="team-wrap">
+      <div class="team-founder">
+        <div class="founder-avatar"><img src="images/Founder-Image.jpeg" alt="Mazher Ali Syed, Founder & CEO" /></div>
+        <div>
+          <div class="founder-name">Mazher Ali Syed</div>
+          <div class="founder-title">Founder, Managing Director & CEO</div>
+          <p class="founder-bio">Mazher Ali Syed founded BaseCam Data Solutions with a clear conviction: that the
+            security industry was stuck in a reactive loop, and AI had the power to break it. With deep expertise in
+            surveillance technology, operational security, and enterprise software, he built Surveil360° from the ground
+            up — an intelligence platform that transforms the cameras businesses already own into real-time threat
+            prevention systems.</p>
+          <p class="founder-bio" style="margin-bottom:28px">Under his leadership, BaseCam has achieved full Government
+            of India regulatory approval, secured multiple enterprise clients across Telangana and neighbouring states,
+            and established a roadmap for national and international expansion.</p>
+          <a href="https://www.linkedin.com/in/mazher-ali-syed-006786361" target="_blank" class="founder-li">
+            🔗 Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <h2 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.6rem;margin-bottom:36px">Our Core Values</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="v-icon">🛡️</div>
+          <h4>Prevention First</h4>
+          <p>We build systems that stop incidents before they happen — not systems that document them after the fact.
+          </p>
+        </div>
+        <div class="value-card">
+          <div class="v-icon">🔍</div>
+          <h4>Verified Intelligence</h4>
+          <p>Every AI alert is human-verified. We never trade accuracy for speed — because false alarms erode trust.</p>
+        </div>
+        <div class="value-card">
+          <div class="v-icon">♻️</div>
+          <h4>Zero Waste Capital</h4>
+          <p>We maximise the value of infrastructure businesses already own. No new hardware. Maximum new capability.
+          </p>
+        </div>
+        <div class="value-card">
+          <div class="v-icon">📈</div>
+          <h4>Scalable by Design</h4>
+          <p>From one outlet to 500 sites — our platform scales linearly in capability, not in cost.</p>
+        </div>
+        <div class="value-card">
+          <div class="v-icon">🤝</div>
+          <h4>Partnership Model</h4>
+          <p>We operate as an extension of your security team, not a vendor. Your success is measured in our SLAs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <div id="privacy" class="page">
+    <section class="page-hero">
+      <div class="ph-tag">Legal</div>
+      <h1>Privacy <em>Policy</em></h1>
+      <p>How Surveil360° collects, uses, discloses, and protects your information.</p>
+    </section>
+
+    <div class="legal-body">
+      <p class="legal-meta">Effective Date: June 23, 2026</p>
+
+      <p>Surveil360 (“Surveil360,” “we,” “our,” or “us”) is a service provided by BaseCam Data Solutions Private
+        Limited. We are committed to protecting the privacy and security of our customers, website visitors, business
+        partners, and users of our services.</p>
+      <p>This Privacy Policy explains how we collect, use, disclose, store, and protect information obtained through our
+        website, applications, products, and services.</p>
+      <p>By accessing or using www.surveil360.com, you agree to the practices described in this Privacy Policy.</p>
+
+      <h2>1. Information We Collect</h2>
+      <h3>A. Information You Provide</h3>
+      <p>We may collect information that you voluntarily provide, including:</p>
+      <ul>
+        <li>Name</li>
+        <li>Company name</li>
+        <li>Email address</li>
+        <li>Phone number</li>
+        <li>Job title</li>
+        <li>Business address</li>
+        <li>Account credentials</li>
+        <li>Customer support inquiries</li>
+        <li>Information submitted through contact forms</li>
+      </ul>
+
+      <h3>B. Device and Technical Information</h3>
+      <p>When you visit our website or use our services, we may automatically collect:</p>
+      <ul>
+        <li>IP address</li>
+        <li>Browser type and version</li>
+        <li>Operating system</li>
+        <li>Device identifiers</li>
+        <li>Website usage data</li>
+        <li>Referring URLs</li>
+        <li>Access times and dates</li>
+      </ul>
+
+      <h3>C. Security and Monitoring Data</h3>
+      <p>Depending on the services utilized, Surveil360 may process:</p>
+      <ul>
+        <li>Security event data</li>
+        <li>Alarm notifications</li>
+        <li>Camera metadata</li>
+        <li>Incident reports</li>
+        <li>User activity logs</li>
+        <li>Monitoring and response records</li>
+      </ul>
+      <p>We process such information solely for providing, maintaining, and improving our services.</p>
+
+      <h2>2. How We Use Your Information</h2>
+      <p>We may use collected information to:</p>
+      <ul>
+        <li>Provide and operate our services</li>
+        <li>Process inquiries and customer requests</li>
+        <li>Manage customer accounts</li>
+        <li>Deliver monitoring and security-related services</li>
+        <li>Improve website functionality and user experience</li>
+        <li>Communicate service updates and notifications</li>
+        <li>Provide technical support</li>
+        <li>Detect, prevent, and investigate fraud, abuse, or security incidents</li>
+        <li>Comply with legal obligations</li>
+      </ul>
+
+      <h2>3. Legal Basis for Processing</h2>
+      <p>Where applicable, we process personal information based on:</p>
+      <ul>
+        <li>Your consent</li>
+        <li>Performance of a contract</li>
+        <li>Compliance with legal obligations</li>
+        <li>Legitimate business interests, including service improvement and security</li>
+      </ul>
+
+      <h2>4. Information Sharing and Disclosure</h2>
+      <p>We do not sell personal information.</p>
+      <p>We may share information with:</p>
+      <ul>
+        <li>Authorized service providers and technology partners</li>
+        <li>Monitoring and emergency response partners (where applicable)</li>
+        <li>Cloud hosting providers</li>
+        <li>Professional advisors and auditors</li>
+        <li>Government authorities when required by law</li>
+        <li>Successors in the event of a merger, acquisition, or corporate restructuring</li>
+      </ul>
+      <p>All third parties are required to maintain appropriate confidentiality and security measures.</p>
+
+      <h2>5. Data Security</h2>
+      <p>We implement commercially reasonable administrative, technical, and physical safeguards designed to protect
+        personal information against unauthorized access, disclosure, alteration, or destruction.</p>
+      <p>These measures may include:</p>
+      <ul>
+        <li>Encrypted communications</li>
+        <li>Access controls</li>
+        <li>Secure cloud infrastructure</li>
+        <li>Authentication mechanisms</li>
+        <li>Security monitoring and auditing</li>
+      </ul>
+      <p>While we strive to protect your information, no method of transmission or storage can be guaranteed to be
+        completely secure.</p>
+
+      <h2>6. Data Retention</h2>
+      <p>We retain personal information only for as long as necessary to:</p>
+      <ul>
+        <li>Provide our services</li>
+        <li>Fulfill contractual obligations</li>
+        <li>Resolve disputes</li>
+        <li>Enforce agreements</li>
+        <li>Comply with legal and regulatory requirements</li>
+      </ul>
+      <p>Retention periods may vary depending on the nature of the data and applicable laws.</p>
+
+      <h2>7. Cookies and Tracking Technologies</h2>
+      <p>Our website may use cookies and similar technologies to:</p>
+      <ul>
+        <li>Improve website performance</li>
+        <li>Remember user preferences</li>
+        <li>Analyze website traffic</li>
+        <li>Enhance user experience</li>
+      </ul>
+      <p>Users may manage cookie preferences through their browser settings.</p>
+
+      <h2>8. International Data Transfers</h2>
+      <p>Information may be processed and stored in countries other than your country of residence. Where required,
+        appropriate safeguards will be implemented to protect personal information during international transfers.</p>
+
+      <h2>9. Your Rights</h2>
+      <p>Depending on applicable laws, you may have rights to:</p>
+      <ul>
+        <li>Access your personal information</li>
+        <li>Correct inaccurate information</li>
+        <li>Request deletion of personal information</li>
+        <li>Restrict or object to processing</li>
+        <li>Withdraw consent</li>
+        <li>Request data portability</li>
+      </ul>
+      <p>Requests may be submitted using the contact details provided below.</p>
+
+      <h2>10. Third-Party Websites</h2>
+      <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or
+        content of external websites. Users should review the privacy policies of such websites independently.</p>
+
+      <h2>11. Children's Privacy</h2>
+      <p>Our services are intended for business and professional use and are not directed toward individuals under the
+        age of 18. We do not knowingly collect personal information from children.</p>
+
+      <h2>12. Changes to This Privacy Policy</h2>
+      <p>We reserve the right to update this Privacy Policy at any time. Updated versions will be posted on this page
+        with a revised effective date.</p>
+      <p>Continued use of our services following any changes constitutes acceptance of the updated Privacy Policy.</p>
+
+      <h2>13. Contact Us</h2>
+      <p>If you have questions regarding this Privacy Policy or our data practices, please contact:</p>
+      <p>
+        BaseCam Data Solutions Private Limited<br />
+        Service Provider: Surveil360<br />
+        Website: <a href="https://www.surveil360.com" target="_blank">www.surveil360.com</a><br />
+        Email: <a href="mailto:connect@surveil360.com">connect@surveil360.com</a>
+      </p>
+      <p>For privacy-related inquiries, requests, or complaints, please contact us using the information above.</p>
+
+      <p>BaseCam Data Solutions Private Limited is committed to maintaining the confidentiality, integrity, and security
+        of information entrusted to us by our customers and partners.</p>
+    </div>
+  </div>
+
+  <div id="terms" class="page">
+    <section class="page-hero">
+      <div class="ph-tag">Legal</div>
+      <h1>Terms and <em>Conditions</em></h1>
+      <p>The terms governing your access to and use of Surveil360° products and services.</p>
+    </section>
+
+    <div class="legal-body">
+      <p class="legal-meta">Effective Date: June 23, 2026</p>
+
+      <h2>1. Introduction</h2>
+      <p>Welcome to Surveil360 (“Surveil360,” “we,” “our,” or “us”), a service provided by <strong>BaseCam Data
+          Solutions Private Limited</strong>.</p>
+      <p>These Terms and Conditions (“Terms”) govern your access to and use of the Surveil360 website, applications,
+        products, software, and services available through www.surveil360.com.</p>
+      <p>By accessing or using our website or services, you agree to be bound by these Terms. If you do not agree with
+        any part of these Terms, you must discontinue use of our services.</p>
+
+      <h2>2. Eligibility</h2>
+      <p>You represent and warrant that:</p>
+      <ul>
+        <li>You are at least 18 years of age.</li>
+        <li>You have the legal authority to enter into binding agreements.</li>
+        <li>You are authorized to act on behalf of any company or organization you represent.</li>
+      </ul>
+
+      <h2>3. Services</h2>
+      <p>Surveil360 provides security technology solutions, monitoring platforms, video surveillance services,
+        analytics, alarm management, incident reporting, and related security services.</p>
+      <p>The availability, functionality, and features of our services may be modified, updated, suspended, or
+        discontinued at any time without prior notice.</p>
+
+      <h2>4. Account Registration</h2>
+      <p>Certain services may require account registration.</p>
+      <p>You agree to:</p>
+      <ul>
+        <li>Provide accurate and complete information.</li>
+        <li>Maintain the confidentiality of login credentials.</li>
+        <li>Promptly update account information when necessary.</li>
+        <li>Notify us immediately of any unauthorized access or security breach.</li>
+      </ul>
+      <p>You are solely responsible for activities occurring under your account.</p>
+
+      <h2>5. Acceptable Use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the services for unlawful purposes.</li>
+        <li>Attempt unauthorized access to systems or networks.</li>
+        <li>Interfere with service operations.</li>
+        <li>Upload malicious software, malware, or harmful code.</li>
+        <li>Reverse engineer, decompile, or attempt to extract source code.</li>
+        <li>Violate any applicable laws or regulations.</li>
+        <li>Use the services to infringe intellectual property rights.</li>
+      </ul>
+      <p>Any misuse may result in suspension or termination of access.</p>
+
+      <h2>6. Intellectual Property</h2>
+      <p>All content, software, technology, trademarks, logos, graphics, text, designs, and materials associated with
+        Surveil360 are the property of BaseCam Data Solutions Private Limited or its licensors.</p>
+      <p>Nothing in these Terms grants any ownership rights to users.</p>
+      <p>Users may not reproduce, distribute, modify, or create derivative works without prior written permission.</p>
+
+      <h2>7. Customer Data</h2>
+      <p>Customers retain ownership of data they submit or generate through the services.</p>
+      <p>By using our services, you grant Surveil360 a limited right to process, store, transmit, and analyze such data
+        solely for:</p>
+      <ul>
+        <li>Delivering services</li>
+        <li>Maintaining system functionality</li>
+        <li>Providing technical support</li>
+        <li>Security and compliance purposes</li>
+      </ul>
+      <p>Customers are responsible for ensuring they have all necessary permissions and legal rights to provide such
+        data.</p>
+
+      <h2>8. Monitoring and Emergency Response Disclaimer</h2>
+      <p>Where monitoring, alerting, or emergency response features are provided:</p>
+      <ul>
+        <li>Surveil360 does not guarantee prevention of crime, loss, injury, or damage.</li>
+        <li>Alerts may be delayed, interrupted, or unavailable due to technical failures, network outages, third-party
+          services, or circumstances beyond our control.</li>
+        <li>Customers remain responsible for maintaining appropriate security procedures and safeguards.</li>
+      </ul>
+      <p>Surveil360 shall not be liable for losses arising from missed, delayed, or unsuccessful alerts or responses.
+      </p>
+
+      <h2>9. Fees and Payments</h2>
+      <p>Certain services may require payment.</p>
+      <p>Customers agree to:</p>
+      <ul>
+        <li>Pay all applicable fees.</li>
+        <li>Provide valid payment information.</li>
+        <li>Pay applicable taxes and government charges.</li>
+      </ul>
+      <p>Failure to make timely payments may result in suspension or termination of services.</p>
+      <p>Unless otherwise stated in a written agreement, fees are non-refundable.</p>
+
+      <h2>10. Service Availability</h2>
+      <p>While we strive to provide reliable service, we do not guarantee uninterrupted or error-free operation.</p>
+      <p>Service interruptions may occur due to:</p>
+      <ul>
+        <li>Maintenance activities</li>
+        <li>Software updates</li>
+        <li>Network outages</li>
+        <li>Third-party service failures</li>
+        <li>Force majeure events</li>
+      </ul>
+
+      <h2>11. Third-Party Services</h2>
+      <p>Our services may integrate with third-party providers, including cloud services, communication platforms,
+        emergency response providers, hardware manufacturers, and software vendors.</p>
+      <p>We are not responsible for:</p>
+      <ul>
+        <li>Third-party products or services</li>
+        <li>Third-party downtime</li>
+        <li>Third-party policies or practices</li>
+      </ul>
+      <p>Your use of third-party services may be subject to separate terms.</p>
+
+      <h2>12. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, BaseCam Data Solutions Private Limited, its directors, officers,
+        employees, affiliates, and partners shall not be liable for:</p>
+      <ul>
+        <li>Indirect damages</li>
+        <li>Incidental damages</li>
+        <li>Special damages</li>
+        <li>Consequential damages</li>
+        <li>Loss of profits</li>
+        <li>Loss of revenue</li>
+        <li>Loss of data</li>
+        <li>Business interruption</li>
+      </ul>
+      <p>In all circumstances, our total liability shall not exceed the amount paid by the customer for the services
+        during the preceding twelve (12) months.</p>
+
+      <h2>13. Indemnification</h2>
+      <p>You agree to defend, indemnify, and hold harmless BaseCam Data Solutions Private Limited from any claims,
+        damages, liabilities, losses, costs, or expenses arising from:</p>
+      <ul>
+        <li>Your use of the services</li>
+        <li>Violation of these Terms</li>
+        <li>Violation of applicable laws</li>
+        <li>Infringement of third-party rights</li>
+      </ul>
+
+      <h2>14. Confidentiality</h2>
+      <p>Both parties agree to protect confidential information disclosed during the course of business and not disclose
+        such information to unauthorized third parties except as required by law.</p>
+
+      <h2>15. Termination</h2>
+      <p>We may suspend or terminate access to services at any time if:</p>
+      <ul>
+        <li>These Terms are violated.</li>
+        <li>Fraudulent activity is suspected.</li>
+        <li>Required payments are not made.</li>
+        <li>Continued access creates security risks.</li>
+      </ul>
+      <p>Termination shall not affect accrued rights or obligations.</p>
+
+      <h2>16. Force Majeure</h2>
+      <p>Surveil360 shall not be responsible for delays or failures caused by events beyond reasonable control,
+        including:</p>
+      <ul>
+        <li>Natural disasters</li>
+        <li>Power failures</li>
+        <li>Internet outages</li>
+        <li>Cyberattacks</li>
+        <li>Government actions</li>
+        <li>Labor disputes</li>
+        <li>Acts of war or terrorism</li>
+      </ul>
+
+      <h2>17. Governing Law</h2>
+      <p>These Terms shall be governed by and interpreted in accordance with the laws of India.</p>
+      <p>Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the competent courts
+        having jurisdiction over the registered office of BaseCam Data Solutions Private Limited.</p>
+
+      <h2>18. Changes to Terms</h2>
+      <p>We reserve the right to modify these Terms at any time.</p>
+      <p>Updated versions will be posted on this page with a revised effective date.</p>
+      <p>Continued use of the services after such updates constitutes acceptance of the revised Terms.</p>
+
+      <h2>19. Contact Information</h2>
+      <p>For questions regarding these Terms and Conditions, please contact:</p>
+      <p>
+        <strong>BaseCam Data Solutions Private Limited</strong><br />
+        Website: <a href="https://www.surveil360.com" target="_blank">www.surveil360.com</a><br />
+        Email: <a href="mailto:connect@surveil360.com">connect@surveil360.com</a>
+      </p>
+      <p>By accessing or using Surveil360 services, you acknowledge that you have read, understood, and agreed to these
+        Terms and Conditions.</p>
+    </div>
+  </div>
+
+  <div id="disclaimer" class="page">
+    <section class="page-hero">
+      <div class="ph-tag">Legal</div>
+      <h1>Disclaimer</h1>
+      <p>Important information regarding the use of Surveil360° and this website.</p>
+    </section>
+
+    <div class="legal-body">
+      <p class="legal-meta">Effective Date: June 23, 2026</p>
+
+      <h2>Website Disclaimer</h2>
+      <p>This Disclaimer governs your use of Surveil360 and the website located at www.surveil360.com (“Website”),
+        operated by <strong>BaseCam Data Solutions Private Limited</strong> (“Surveil360,” “we,” “our,” or “us”).</p>
+      <p>By accessing or using this Website or any related services, you acknowledge and agree to the terms of this
+        Disclaimer.</p>
+
+      <h2>1. General Information</h2>
+      <p>The information provided on this Website is for general informational and business purposes only.</p>
+      <p>While we strive to keep all information accurate, current, and reliable, Surveil360 makes no representations or
+        warranties of any kind, express or implied, regarding:</p>
+      <ul>
+        <li>Accuracy</li>
+        <li>Completeness</li>
+        <li>Reliability</li>
+        <li>Suitability</li>
+        <li>Availability</li>
+        <li>Timeliness</li>
+      </ul>
+      <p>of any information, products, services, graphics, content, or materials contained on this Website.</p>
+      <p>Any reliance you place on such information is strictly at your own risk.</p>
+
+      <h2>2. No Professional Advice</h2>
+      <p>The content on this Website does not constitute legal, financial, regulatory, insurance, security consulting,
+        or professional advice.</p>
+      <p>Users should seek independent professional advice before making decisions based on information obtained from
+        this Website.</p>
+
+      <h2>3. Security Services Disclaimer</h2>
+      <p>Surveil360 provides technology platforms, monitoring solutions, surveillance integrations, analytics, alerts,
+        and related security services.</p>
+      <p>However:</p>
+      <ul>
+        <li>No security system can guarantee complete protection against theft, vandalism, cyberattacks, unauthorized
+          access, property damage, injury, or criminal activity.</li>
+        <li>Security incidents may occur despite the use of our products or services.</li>
+        <li>Users remain responsible for implementing appropriate security measures and risk management procedures.</li>
+      </ul>
+      <p>Surveil360 does not guarantee prevention of any loss, damage, injury, or criminal event.</p>
+
+      <h2>4. Monitoring and Alert Notifications</h2>
+      <p>Where monitoring, notifications, or alert services are provided:</p>
+      <ul>
+        <li>Alerts may be delayed, interrupted, inaccurate, or unavailable.</li>
+        <li>Internet outages, power failures, hardware malfunctions, software issues, mobile carrier disruptions, or
+          third-party service failures may impact performance.</li>
+        <li>Delivery of alerts is not guaranteed.</li>
+      </ul>
+      <p>Users should not rely solely on alerts, notifications, or monitoring services as their only means of protection
+        or emergency response.</p>
+
+      <h2>5. Third-Party Services and Integrations</h2>
+      <p>Surveil360 may integrate with third-party providers, platforms, applications, devices, communication services,
+        cloud providers, or emergency response services.</p>
+      <p>We are not responsible for:</p>
+      <ul>
+        <li>Third-party service interruptions</li>
+        <li>Third-party policies</li>
+        <li>Third-party actions or omissions</li>
+        <li>Data handled by third-party providers</li>
+        <li>Availability or performance of third-party products</li>
+      </ul>
+      <p>Your use of such services is subject to their respective terms and policies.</p>
+
+      <h2>6. Website Availability</h2>
+      <p>We do not guarantee uninterrupted access to the Website.</p>
+      <p>The Website may be unavailable from time to time due to:</p>
+      <ul>
+        <li>Scheduled maintenance</li>
+        <li>System upgrades</li>
+        <li>Technical failures</li>
+        <li>Network disruptions</li>
+        <li>Events beyond our reasonable control</li>
+      </ul>
+      <p>We reserve the right to modify, suspend, or discontinue any part of the Website without prior notice.</p>
+
+      <h2>7. External Links Disclaimer</h2>
+      <p>This Website may contain links to external websites operated by third parties.</p>
+      <p>Such links are provided solely for convenience.</p>
+      <p>Surveil360 does not endorse, control, or assume responsibility for:</p>
+      <ul>
+        <li>Third-party content</li>
+        <li>Products or services</li>
+        <li>Privacy practices</li>
+        <li>Website accuracy</li>
+      </ul>
+      <p>Users access third-party websites at their own risk.</p>
+
+      <h2>8. Limitation of Liability</h2>
+      <p>To the fullest extent permitted by applicable law, BaseCam Data Solutions Private Limited shall not be liable
+        for any:</p>
+      <ul>
+        <li>Direct losses</li>
+        <li>Indirect losses</li>
+        <li>Incidental damages</li>
+        <li>Consequential damages</li>
+        <li>Special damages</li>
+        <li>Loss of profits</li>
+        <li>Loss of business opportunities</li>
+        <li>Loss of data</li>
+        <li>Business interruption</li>
+      </ul>
+      <p>arising from or related to the use of the Website, products, services, monitoring systems, alerts, or
+        information provided by Surveil360.</p>
+
+      <h2>9. No Warranties</h2>
+      <p>All Website content, products, and services are provided on an “AS IS” and “AS AVAILABLE” basis.</p>
+      <p>Surveil360 expressly disclaims all warranties, including but not limited to:</p>
+      <ul>
+        <li>Merchantability</li>
+        <li>Fitness for a particular purpose</li>
+        <li>Non-infringement</li>
+        <li>Availability</li>
+        <li>Security</li>
+        <li>Accuracy</li>
+      </ul>
+      <p>No guarantee is made that the Website or services will be free from errors, interruptions, viruses, or other
+        harmful components.</p>
+
+      <h2>10. Testimonials and Case Studies</h2>
+      <p>Testimonials, case studies, customer feedback, and success stories displayed on this Website reflect individual
+        experiences and results.</p>
+      <p>They do not guarantee similar outcomes for all users.</p>
+      <p>Results may vary depending on circumstances, implementation, and external factors.</p>
+
+      <h2>11. Changes to This Disclaimer</h2>
+      <p>We reserve the right to update or modify this Disclaimer at any time without prior notice.</p>
+      <p>Changes become effective immediately upon publication on this Website.</p>
+      <p>Continued use of the Website constitutes acceptance of the revised Disclaimer.</p>
+
+      <h2>12. Contact Information</h2>
+      <p>For questions regarding this Disclaimer, please contact:</p>
+      <p>
+        <strong>BaseCam Data Solutions Private Limited</strong><br />
+        Website: <a href="https://www.surveil360.com" target="_blank">www.surveil360.com</a><br />
+        Email: <a href="mailto:connect@surveil360.com">connect@surveil360.com</a>
+      </p>
+      <p>By accessing or using Surveil360 services and this Website, you acknowledge that you have read, understood, and
+        agreed to this Disclaimer.</p>
+    </div>
+  </div>
+
+  <div id="contact" class="page">
+    <section class="page-hero">
+      <div class="ph-tag">Get In Touch</div>
+      <h1>Start <em>preventing</em> incidents<br />from day one.</h1>
+      <p>Book a free demonstration and see how Surveil360° turns your existing cameras into an active intelligence
+        system — no commitment required.</p>
+    </section>
+
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <div class="contact-item">
+          <div class="c-icon">🏢</div>
+          <div>
+            <h4>Company</h4>
+            <p>BaseCam Data Solutions Private Limited<br />Operating as Surveil360°</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="c-icon">📍</div>
+          <div>
+            <h4>Registered Location</h4>
+            <p>Telangana, India<br />(Hyderabad Operations)</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="c-icon">🌐</div>
+          <div>
+            <h4>Website</h4>
+            <p><a href="https://surveil360.com" target="_blank" style="color:var(--electric)">surveil360.com</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="c-icon">🔗</div>
+          <div>
+            <h4>LinkedIn</h4>
+            <p><a href="https://www.linkedin.com/in/mazher-ali-syed-006786361" target="_blank"
+                style="color:var(--electric)">Connect with the Founder</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="c-icon">⚡</div>
+          <div>
+            <h4>Response Time</h4>
+            <p>We respond to all demo requests within 24 business hours. Enterprise inquiries prioritised.</p>
+          </div>
+        </div>
+      </div>
+      <form action="https://formsubmit.co/basecamdata@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Demo Request – Surveil360" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html" />
+
+        <div class="contact-form">
+          <h3>Request a Free Demo</h3>
+
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="name" placeholder="Your name" required />
+          </div>
+
+          <div class="form-group">
+            <label>Company / Organisation</label>
+            <input type="text" name="company" placeholder="Your company name" />
+          </div>
+
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="your@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" />
+          </div>
+
+          <div class="form-group">
+            <label>Industry</label>
+            <select name="industry">
+              <option value="">Select your industry</option>
+              <option>Retail</option>
+              <option>Manufacturing & Warehousing</option>
+              <option>Hospitality & Hotels</option>
+              <option>Healthcare</option>
+              <option>Education & Institutions</option>
+              <option>Religious & Community Sites</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Number of Camera Locations</label>
+            <select name="camera_count">
+              <option value="">Select scale</option>
+              <option>1–5 cameras</option>
+              <option>6–20 cameras</option>
+              <option>21–100 cameras</option>
+              <option>100+ cameras (Enterprise)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Message (Optional)</label>
+            <textarea name="message"
+              placeholder="Tell us about your current security setup and what you're looking to achieve…"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary form-submit">Request Free Demo →</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/Website-Header.JPG" class="logo-img footer-logo-img" alt="Surveil360 Logo" />
+           <p class="footer-brand-cin-num">Ministry of Corporate Affairs: CIN U74999TG2023PTC170483</p>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;max-width:320px"><a>BaseCam Data Solutions
+            Private Limited  <br>
+          
+          </a>12+ years of expertise in remote surveillance, video monitoring, and data-driven security. Since 2014.
+          </p>
+       
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('home')">Home</a></li>
+          <li><a href="#" onclick="showPage('about')">About Us</a></li>
+          <li><a href="./mazher-profile.html" onclick="showPage()"> Our Founder</a></li>
+          <li><a href="#" onclick="showPage('services')">Services</a></li>
+          <li><a href="#" onclick="showPage('industries')">Industries</a></li>
+          <li><a href="#" onclick="showPage('team')">The Team</a></li>
+          <li><a href="#" onclick="showPage('contact')">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('privacy')">Privacy Policy</a></li>
+          <li><a href="#" onclick="showPage('terms')">Terms & Conditions</a></li>
+          <li><a href="#" onclick="showPage('disclaimer')">Disclaimer</a></li>
+        </ul>
+        <div class="footer-social">
+          <a href="https://www.youtube.com/@Surveil360Nexus" target="_blank" rel="noopener" aria-label="YouTube"
+            class="social-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path
+                d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.94-1.9-.95-2.36-1C16.9 2.5 12 2.5 12 2.5h-.01s-4.89 0-8.19.34c-.46.05-1.46.06-2.36 1C.73 4.56.5 6.2.5 6.2S.27 8.12.27 10.04v1.8c0 1.92.23 3.84.23 3.84s.23 1.64.94 2.36c.9.94 2.08.91 2.6 1.01 1.89.18 8 .24 8 .24s4.9-.01 8.2-.35c.46-.05 1.46-.06 2.36-1 .71-.72.94-2.36.94-2.36s.23-1.92.23-3.84v-1.8c0-1.92-.23-3.84-.23-3.84zM9.75 14.85V7.62l6.5 3.62-6.5 3.61z" />
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/Surveil360" target="_blank" rel="noopener" aria-label="Facebook"
+            class="social-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path
+                d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.41c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/surveil360?igsh=Z2kxdDk2ejM2bHl3" target="_blank" rel="noopener"
+            aria-label="Instagram" class="social-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path
+                d="M12 2c2.72 0 3.05.01 4.12.06 1.07.05 1.79.22 2.43.46.66.25 1.21.6 1.76 1.15.5.5.84 1.02 1.13 1.7.24.6.4 1.32.45 2.44.05 1.07.06 1.4.06 4.12s-.01 3.05-.06 4.12c-.05 1.12-.21 1.84-.45 2.44a4.6 4.6 0 0 1-1.13 1.7 4.7 4.7 0 0 1-1.76 1.15c-.64.24-1.36.41-2.43.46-1.07.05-1.4.06-4.12.06s-3.05-.01-4.12-.06c-1.07-.05-1.79-.22-2.43-.46a4.7 4.7 0 0 1-1.76-1.15 4.6 4.6 0 0 1-1.13-1.7c-.24-.6-.4-1.32-.45-2.44C2.01 15.05 2 14.72 2 12s.01-3.05.06-4.12c.05-1.12.21-1.84.45-2.44.29-.68.63-1.2 1.13-1.7A4.7 4.7 0 0 1 5.4.59C6.04.35 6.76.18 7.88.13 8.95.08 9.28.07 12 .07zm0 1.8c-2.67 0-2.99.01-4.04.06-.97.04-1.5.2-1.85.34-.46.18-.79.39-1.14.74-.35.35-.56.68-.74 1.14-.14.35-.3.88-.34 1.85C3.83 9.01 3.82 9.33 3.82 12s.01 2.99.06 4.04c.04.97.2 1.5.34 1.85.18.46.39.79.74 1.14.35.35.68.56 1.14.74.35.14.88.3 1.85.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.97-.04 1.5-.2 1.85-.34.46-.18.79-.39 1.14-.74.35-.35.56-.68.74-1.14.14-.35.3-.88.34-1.85.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.97-.2-1.5-.34-1.85a3 3 0 0 0-.74-1.14 3 3 0 0 0-1.14-.74c-.35-.14-.88-.3-1.85-.34C14.99 3.82 14.67 3.81 12 3.81zm0 3.06a5.13 5.13 0 1 1 0 10.26 5.13 5.13 0 0 1 0-10.26zm0 1.8a3.33 3.33 0 1 0 0 6.66 3.33 3.33 0 0 0 0-6.66zm6.54-1.97a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BASECAM DATA Solution Private limited. All right reserved. Hyderabad - India |<a href="https://www.surveil360.com/" class="footer-bottom-light"> surveil360.com</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js">
+
+  </script>
+</body>
+
+</html>
